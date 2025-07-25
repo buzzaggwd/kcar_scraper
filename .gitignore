@@ -1,0 +1,9 @@
+# Виртуальная среда
+venv/
+.venv/
+
+# Файлы базы данных SQLite
+*.sqlite
+
+# Кэш pip
+__pycache__/
