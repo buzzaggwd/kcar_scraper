@@ -2,3 +2,4 @@ scrapy
 requests
 scrapy_splash
 sqlalchemy
+beautifulsoup4

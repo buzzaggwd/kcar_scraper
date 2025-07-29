@@ -31,3 +31,36 @@ class KcarItem(scrapy.Item):
     price_full = scrapy.Field()  # Полная цена — "npriceFullType"
     transmission_name = scrapy.Field()  # Название коробки передач — "trnsmsncdNm"
     vin = scrapy.Field()  # VIN код — "vin"
+
+
+class CharanchaItem(scrapy.Item):
+    car_id = scrapy.Field()  # Айдишник автомобиля
+
+    # inspectionValidityStartDt = scrapy.Field()
+    # inspectionValidityEndDt = scrapy.Field()
+    # purposeName = scrapy.Field()
+    # specNo = scrapy.Field()
+
+    assortName = scrapy.Field()  # Тип кузова (승용 = легковой)
+    capacity = scrapy.Field()  # Число посадочных мест
+    carName = scrapy.Field()  # Полное наименование модели
+    carType = scrapy.Field()  # Класс авто (대형 = большой)
+    cylinder = scrapy.Field()  # Количество цилиндров
+    displacement = scrapy.Field()  # Объeм двигателя в куб. см
+    formName = scrapy.Field()  # Код кузов комплектации
+    fuelNm = scrapy.Field()  # Тип топлива (например, бензин)
+    gasMileage = scrapy.Field()  # Расход топлива (л/100 км)
+    height = scrapy.Field()
+    length = scrapy.Field()
+    width = scrapy.Field()  # Габариты (мм)
+    weight = scrapy.Field()  # Масса (кг)
+    transmissionNm = scrapy.Field()  # Тип коробки передач (자동 = автомат)
+    modelYyyyDt = scrapy.Field()  # Год модели
+    releaseDt = scrapy.Field()  # Дата выпуска
+    motorFormName = scrapy.Field()  # Тип мотора (кодировочное имя)
+    motorPs = scrapy.Field()  # Мощность двигателя (л. с.)
+    motorsRpm = scrapy.Field()  # Максимальные обороты двигателя
+    price = scrapy.Field()  # Опубликованная цена (в KRW, южнокорейская вона)
+    # maxLoad = scrapy.Field()  # Максимальная грузоподъёмность (чаще ноль — легковушка)
+    regNo = scrapy.Field()  # Регистрационный номер (корейские знаки)
+    vin = scrapy.Field()  # Уникальный VIN
