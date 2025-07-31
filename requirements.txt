@@ -3,3 +3,4 @@ requests
 scrapy_splash
 sqlalchemy
 beautifulsoup4
+fake-useragent

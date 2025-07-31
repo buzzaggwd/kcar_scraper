@@ -7,6 +7,33 @@ import scrapy
 from scrapy.item import Item, Field
 
 
+class KcarScraperItem(scrapy.Item):
+    api_id = scrapy.Field()
+    brand = scrapy.Field()
+    model = scrapy.Field()
+    year = scrapy.Field()
+    mileage = scrapy.Field()
+    color = scrapy.Field()
+    finish = scrapy.Field()
+    engine = scrapy.Field()
+    engine_show = scrapy.Field()
+    grade = scrapy.Field()
+    equip = scrapy.Field()
+    drive = scrapy.Field()
+    engine_volume = scrapy.Field()
+    repairs_damage = scrapy.Field()
+    source_link = scrapy.Field()
+    transmission = scrapy.Field()
+    body_type = scrapy.Field()
+    pasngr_сnt = scrapy.Field()
+    photos = scrapy.Field()
+    rate = scrapy.Field()
+    lot = scrapy.Field()
+    power_volume = scrapy.Field()
+    month = scrapy.Field()
+    auction = scrapy.Field()
+    brand_country = scrapy.Field()
+
 class KcarItem(scrapy.Item):
     car_id = scrapy.Field()  # Айдишник автомобиля — "carCd"
 

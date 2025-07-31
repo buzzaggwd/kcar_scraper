@@ -61,8 +61,8 @@ LOG_LEVEL = 'INFO'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "kcar_scraper.pipelines.KcarScraperPipeline": 300,
-   "kcar_scraper.pipelines.CharanchaScraperPipeline": 301,
+   "kcar_scraper.pipelines.KcarScraperPipelineNew": 300,
+   # "kcar_scraper.pipelines.CharanchaScraperPipeline": 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

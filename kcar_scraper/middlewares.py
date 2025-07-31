@@ -7,7 +7,16 @@ from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.downloadermiddlewares.retry import RetryMiddleware
+from twisted.internet.error import TimeoutError, TCPTimedOutError
+from scrapy.utils.response import response_status_message
 
+
+class CustomRetryMiddleware(RetryMiddleware):
+    def process_exception(self, request, exception, spider):
+        if isinstance(exception, (TimeoutError, TCPTimedOutError)):
+            spider.logger.warning(f"Таймаут: {exception} — повтор запроса")
+            return self._retry(request, exception, spider)
 
 class KcarScraperSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
